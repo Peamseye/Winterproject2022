@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ky2QfpoC/2rAcNLpc3pWZpEv99tE27nqO1AqtaBRWQAn31WMWQS9k8E3Ajshiduh/Ip/Q4AGiVnp4AoY1uOLsQ==",
+  "dgSpecHash": "gec2rXOJGITe9DMsAeoOMHK5U+uLojx5wZ87QLyx3r4FOAlpJNs41j2yya26FMbLSvFb6/IwbQvVaxo/32kgEw==",
   "success": true,
   "projectFilePath": "c:\\Users\\aslund.alexander\\OneDrive\\Dokument\\TE20B Spel - Webb\\Programmering 1\\Projekt\\Winterproject2022\\Winterproject2022\\Winterproject2022.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\aslund.alexander\\.nuget\\packages\\raylib-cs\\3.7.0.1\\raylib-cs.3.7.0.1.nupkg.sha512",
+    "C:\\Users\\aslund.alexander\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
   "logs": []
 }
