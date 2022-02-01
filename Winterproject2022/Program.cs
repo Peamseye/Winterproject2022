@@ -1,3 +1,5 @@
 ﻿using System;
+using Raylib_cs;
 
-Console.WriteLine("Hello World!");
+Raylib.InitWindow(800, 600, "Winter project: Raylib");
+
