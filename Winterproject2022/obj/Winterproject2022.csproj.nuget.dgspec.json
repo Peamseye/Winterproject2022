@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\aslund.alexander\\OneDrive\\Dokument\\TE20B Spel - Webb\\Programmering 1\\Projekt\\Winterproject2022\\Winterproject2022\\Winterproject2022.csproj": {}
+    "C:\\Users\\aslund.alexander\\OneDrive\\Dokument\\TE20B Spel - Webb\\Programmering 1\\Projekt\\Winterproject2022\\Winterproject2022\\Winterproject2022.csproj": {}
   },
   "projects": {
-    "c:\\Users\\aslund.alexander\\OneDrive\\Dokument\\TE20B Spel - Webb\\Programmering 1\\Projekt\\Winterproject2022\\Winterproject2022\\Winterproject2022.csproj": {
+    "C:\\Users\\aslund.alexander\\OneDrive\\Dokument\\TE20B Spel - Webb\\Programmering 1\\Projekt\\Winterproject2022\\Winterproject2022\\Winterproject2022.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\aslund.alexander\\OneDrive\\Dokument\\TE20B Spel - Webb\\Programmering 1\\Projekt\\Winterproject2022\\Winterproject2022\\Winterproject2022.csproj",
+        "projectUniqueName": "C:\\Users\\aslund.alexander\\OneDrive\\Dokument\\TE20B Spel - Webb\\Programmering 1\\Projekt\\Winterproject2022\\Winterproject2022\\Winterproject2022.csproj",
         "projectName": "Winterproject2022",
-        "projectPath": "c:\\Users\\aslund.alexander\\OneDrive\\Dokument\\TE20B Spel - Webb\\Programmering 1\\Projekt\\Winterproject2022\\Winterproject2022\\Winterproject2022.csproj",
+        "projectPath": "C:\\Users\\aslund.alexander\\OneDrive\\Dokument\\TE20B Spel - Webb\\Programmering 1\\Projekt\\Winterproject2022\\Winterproject2022\\Winterproject2022.csproj",
         "packagesPath": "C:\\Users\\aslund.alexander\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\aslund.alexander\\OneDrive\\Dokument\\TE20B Spel - Webb\\Programmering 1\\Projekt\\Winterproject2022\\Winterproject2022\\obj\\",
+        "outputPath": "C:\\Users\\aslund.alexander\\OneDrive\\Dokument\\TE20B Spel - Webb\\Programmering 1\\Projekt\\Winterproject2022\\Winterproject2022\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\aslund.alexander\\AppData\\Roaming\\NuGet\\NuGet.Config"
