@@ -5,7 +5,7 @@ Raylib.InitWindow(800, 600, "Winter project: Raylib");
 Raylib.SetTargetFPS(60);
 
 
-Texture2D playerImage = Raylib.LoadTexture("VinterprojectTopDown-8-Bit-Character-MaybeBorrowed.png");
+Texture2D playerImage = Raylib.LoadTexture("TopDownZombie.png");
 Rectangle playerRect = new Rectangle(10, 10, 32, 32);
 
 while (!Raylib.WindowShouldClose())
