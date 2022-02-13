@@ -20,7 +20,7 @@ Rectangle wallRect5 = new Rectangle(290, 130, 65, 10);
 Rectangle wallRect6 = new Rectangle(245, 130, 10, 30);
 Rectangle wallRect7 = new Rectangle(285, 130, 10, 30);
 
-Rectangle triggerRect1 = new Rectangle(255, 155, 30, 2);
+Rectangle triggerRect1 = new Rectangle(255, 155, 30, 5);
 
 
 while (!Raylib.WindowShouldClose())
