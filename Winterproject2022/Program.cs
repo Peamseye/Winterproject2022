@@ -15,6 +15,8 @@ Texture2D outsideImage = Raylib.LoadTexture("TopDownOut.png");
 Rectangle wallRect1 = new Rectangle(160, 70, 10, 60);
 Rectangle wallRect2 = new Rectangle(170, 70, 175, 10);
 Rectangle wallRect3 = new Rectangle(345, 70, 10, 60);
+Rectangle wallRect4 = new Rectangle(160, 130, 90, 10);
+Rectangle wallRect5 = new Rectangle(290, 130, 65, 10);
 
 
 while (!Raylib.WindowShouldClose())
@@ -31,6 +33,8 @@ while (!Raylib.WindowShouldClose())
     Raylib.DrawRectangleRec(wallRect1, Color.LIME);
     Raylib.DrawRectangleRec(wallRect2, Color.LIME);
     Raylib.DrawRectangleRec(wallRect3, Color.LIME);
+    Raylib.DrawRectangleRec(wallRect4, Color.LIME);
+    Raylib.DrawRectangleRec(wallRect5, Color.LIME);
 
     Raylib.EndDrawing();
 }
