@@ -17,6 +17,10 @@ Rectangle wallRect2 = new Rectangle(170, 70, 175, 10);
 Rectangle wallRect3 = new Rectangle(345, 70, 10, 60);
 Rectangle wallRect4 = new Rectangle(160, 130, 90, 10);
 Rectangle wallRect5 = new Rectangle(290, 130, 65, 10);
+Rectangle wallRect6 = new Rectangle(245, 130, 10, 30);
+Rectangle wallRect7 = new Rectangle(285, 130, 10, 30);
+
+Rectangle triggerRect1 = new Rectangle(255, 155, 30, 2);
 
 
 while (!Raylib.WindowShouldClose())
@@ -35,6 +39,11 @@ while (!Raylib.WindowShouldClose())
     Raylib.DrawRectangleRec(wallRect3, Color.LIME);
     Raylib.DrawRectangleRec(wallRect4, Color.LIME);
     Raylib.DrawRectangleRec(wallRect5, Color.LIME);
+    Raylib.DrawRectangleRec(wallRect6, Color.LIME);
+    Raylib.DrawRectangleRec(wallRect7, Color.LIME);
+
+    Raylib.DrawRectangleRec(triggerRect1, Color.BLUE);
+
 
     Raylib.EndDrawing();
 }
