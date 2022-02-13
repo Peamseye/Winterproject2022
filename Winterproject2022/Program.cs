@@ -6,10 +6,17 @@ Raylib.SetTargetFPS(60);
 
 
 Texture2D playerImage = Raylib.LoadTexture("TopDownPlayer.png");
+Rectangle playerRect = new Rectangle(220, 90, 64, 64);
+
+
 Texture2D zombieImage = Raylib.LoadTexture("TopDownZombie.png");
+Rectangle zombieRect = new Rectangle(100, 100, 64, 64);
 
 Texture2D houseImage = Raylib.LoadTexture("TopDownHouse.png");
 Texture2D outsideImage = Raylib.LoadTexture("TopDownOut.png");
+
+
+
 
 
 Rectangle wallRect1 = new Rectangle(160, 70, 10, 60);
@@ -32,7 +39,9 @@ while (!Raylib.WindowShouldClose())
     Raylib.ClearBackground(Color.BLUE);
 
     Raylib.DrawTexture(houseImage, 0, 0, Color.WHITE);
-    Raylib.DrawTexture(playerImage, 220, 90, Color.WHITE);
+
+    Raylib.DrawRectangleRec(playerRect, Color.BLANK);
+    Raylib.DrawTexture(playerImage, (int) playerRect.x, (int) playerRect.y, Color.WHITE);
 
     Raylib.DrawRectangleRec(wallRect1, Color.LIME);
     Raylib.DrawRectangleRec(wallRect2, Color.LIME);
