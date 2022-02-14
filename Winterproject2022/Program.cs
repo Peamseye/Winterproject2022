@@ -49,10 +49,22 @@ Rectangle hallwallRect11 = new Rectangle(445, 70, 10, 175);
 Rectangle hallwallRect12 = new Rectangle(425, 235, 20, 10);
 Rectangle hallwallRect13 = new Rectangle(415, 235, 10, 25);
 Rectangle hallwallRect14 = new Rectangle(320, 250, 100, 10);
-Rectangle hallwallRect15 = new Rectangle(290, 240, 40, 10);
-Rectangle hallwallRect16 = new Rectangle(205, 240, 45, 20);
+Rectangle hallwallRect15 = new Rectangle(285, 240, 35, 10);
+Rectangle hallwallRect16 = new Rectangle(205, 240, 50, 20);
 Rectangle hallwallRect17 = new Rectangle(165, 240, 50, 10);
 Rectangle hallwallRect18 = new Rectangle(135, 240, 30, 20);
+
+//Rectangle hallwallRect19 = new Rectangle(135, 240, 30, 20);
+//Rectangle hallwallRect20 = new Rectangle(135, 240, 30, 20);
+//Rectangle hallwallRect21 = new Rectangle(135, 240, 30, 20);
+//Rectangle hallwallRect22 = new Rectangle(135, 240, 30, 20);
+//Rectangle hallwallRect23 = new Rectangle(135, 240, 30, 20);
+//Rectangle hallwallRect24 = new Rectangle(135, 240, 30, 20);
+
+
+
+
+//Avmarkering för kollision (Vägg, Vardagsrummet)
 
 
 
@@ -60,9 +72,9 @@ Rectangle hallwallRect18 = new Rectangle(135, 240, 30, 20);
 
 //Avmarkering för trigger (Förflyttning mellan rum)
 Rectangle triggerRect1 = new Rectangle(255, 155, 30, 5);   //Sovrummet -> Hallen
-Rectangle triggerRect2 = new Rectangle(250, 230, 40, 5);   //Hallen -> Sovrummet
+Rectangle triggerRect2 = new Rectangle(255, 240, 30, 5);   //Hallen -> Sovrummet
 Rectangle triggerRect3 = new Rectangle(540, 250, 5, 45);   //Hallen -> Förrådet
-Rectangle triggerRect4 = new Rectangle(100, 100, 30, 5);   //Förrådet -> Hallen
+Rectangle triggerRect4 = new Rectangle(400, 430, 30, 5);   //Förrådet -> Hallen
 
 while (!Raylib.WindowShouldClose())
 {
@@ -92,8 +104,21 @@ while (!Raylib.WindowShouldClose())
 
     if (Raylib.CheckCollisionRecs(triggerRect2, playerRect))
     {
+        playerRect.x = 255;
+        playerRect.y = 120;
+    }
+
+
+    if (Raylib.CheckCollisionRecs(triggerRect3, playerRect))
+    {
         playerRect.x = 395;
         playerRect.y = 450;
+    }
+
+    if (Raylib.CheckCollisionRecs(triggerRect4, playerRect))
+    {
+        playerRect.x = 505;
+        playerRect.y = 260;
     }
 
 
@@ -141,16 +166,23 @@ while (!Raylib.WindowShouldClose())
     Raylib.DrawRectangleRec(hallwallRect17, Color.LIME);
     Raylib.DrawRectangleRec(hallwallRect18, Color.LIME);
 
+    //Raylib.DrawRectangleRec(hallwallRect19, Color.LIME);
+    //Raylib.DrawRectangleRec(hallwallRect20, Color.LIME);
+    //Raylib.DrawRectangleRec(hallwallRect21, Color.LIME);
+    //Raylib.DrawRectangleRec(hallwallRect22, Color.LIME);
+    //Raylib.DrawRectangleRec(hallwallRect23, Color.LIME);
+    //Raylib.DrawRectangleRec(hallwallRect24, Color.LIME);
+
     //Kollision Dörr (Sovrummet -> Hallen)
     Raylib.DrawRectangleRec(triggerRect1, Color.BLUE);
 
     //Kollision Dörr (Hallen -> Sovrummet)
     Raylib.DrawRectangleRec(triggerRect2, Color.BLUE);
 
-    //Kollision Dörr (Hallen -> Förrådet)
+    //Kollision Dörr (Hallen -> Vardagsrummet)
     Raylib.DrawRectangleRec(triggerRect3, Color.BLUE);
 
-    //Kollision Dörr (Förrådet -> Hallen)
+    //Kollision Dörr (Vardagsrummet -> Hallen)
     Raylib.DrawRectangleRec(triggerRect4, Color.BLUE);
 
 
