@@ -42,6 +42,17 @@ Rectangle hallwallRect4 = new Rectangle(515, 185, 10, 65);
 Rectangle hallwallRect5 = new Rectangle(515, 295, 10, 60);
 Rectangle hallwallRect6 = new Rectangle(525, 240, 20, 10);
 Rectangle hallwallRect7 = new Rectangle(525, 295, 20, 10);
+Rectangle hallwallRect8 = new Rectangle(560, 145, 135, 10);
+Rectangle hallwallRect9 = new Rectangle(685, 70, 10, 75);
+Rectangle hallwallRect10 = new Rectangle(445, 70, 250, 10);
+Rectangle hallwallRect11 = new Rectangle(445, 70, 10, 175);
+Rectangle hallwallRect12 = new Rectangle(425, 235, 20, 10);
+Rectangle hallwallRect13 = new Rectangle(415, 235, 10, 25);
+Rectangle hallwallRect14 = new Rectangle(320, 250, 100, 10);
+Rectangle hallwallRect15 = new Rectangle(290, 240, 40, 10);
+Rectangle hallwallRect16 = new Rectangle(205, 240, 45, 20);
+Rectangle hallwallRect17 = new Rectangle(165, 240, 50, 10);
+Rectangle hallwallRect18 = new Rectangle(135, 240, 30, 20);
 
 
 
@@ -49,7 +60,9 @@ Rectangle hallwallRect7 = new Rectangle(525, 295, 20, 10);
 
 //Avmarkering för trigger (Förflyttning mellan rum)
 Rectangle triggerRect1 = new Rectangle(255, 155, 30, 5);   //Sovrummet -> Hallen
-Rectangle triggerRect2 = new Rectangle(540, 250, 5, 45);
+Rectangle triggerRect2 = new Rectangle(250, 230, 40, 5);   //Hallen -> Sovrummet
+Rectangle triggerRect3 = new Rectangle(540, 250, 5, 45);   //Hallen -> Förrådet
+Rectangle triggerRect4 = new Rectangle(100, 100, 30, 5);   //Förrådet -> Hallen
 
 while (!Raylib.WindowShouldClose())
 {
@@ -116,12 +129,29 @@ while (!Raylib.WindowShouldClose())
     Raylib.DrawRectangleRec(hallwallRect5, Color.LIME);
     Raylib.DrawRectangleRec(hallwallRect6, Color.LIME);
     Raylib.DrawRectangleRec(hallwallRect7, Color.LIME);
+    Raylib.DrawRectangleRec(hallwallRect8, Color.LIME);
+    Raylib.DrawRectangleRec(hallwallRect9, Color.LIME);
+    Raylib.DrawRectangleRec(hallwallRect10, Color.LIME);
+    Raylib.DrawRectangleRec(hallwallRect11, Color.LIME);
+    Raylib.DrawRectangleRec(hallwallRect12, Color.LIME);
+    Raylib.DrawRectangleRec(hallwallRect13, Color.LIME);
+    Raylib.DrawRectangleRec(hallwallRect14, Color.LIME);
+    Raylib.DrawRectangleRec(hallwallRect15, Color.LIME);
+    Raylib.DrawRectangleRec(hallwallRect16, Color.LIME);
+    Raylib.DrawRectangleRec(hallwallRect17, Color.LIME);
+    Raylib.DrawRectangleRec(hallwallRect18, Color.LIME);
 
     //Kollision Dörr (Sovrummet -> Hallen)
     Raylib.DrawRectangleRec(triggerRect1, Color.BLUE);
 
-    //Kollision Dörr (Hallen -> Förrådet)
+    //Kollision Dörr (Hallen -> Sovrummet)
     Raylib.DrawRectangleRec(triggerRect2, Color.BLUE);
+
+    //Kollision Dörr (Hallen -> Förrådet)
+    Raylib.DrawRectangleRec(triggerRect3, Color.BLUE);
+
+    //Kollision Dörr (Förrådet -> Hallen)
+    Raylib.DrawRectangleRec(triggerRect4, Color.BLUE);
 
 
     Raylib.EndDrawing();
