@@ -13,7 +13,12 @@ Rectangle playerRect = new Rectangle(220, 90, playerImage.width, playerImage.hei
 
 //Zombiens Startposition
 Texture2D zombieImage = Raylib.LoadTexture("TopDownZombie.png");
-Rectangle zombieRect = new Rectangle(100, 100, zombieImage.width, zombieImage.height);
+Rectangle zombieRect = new Rectangle(400, 450, zombieImage.width, zombieImage.height);
+
+//Zombiens grundförflyttning
+//int zombiemoveX = 0;
+//int zombiemoveY = 0;
+
 
 //Bakgrundens Texturer
 Texture2D houseImage = Raylib.LoadTexture("TopDownHouse.png");
@@ -53,31 +58,40 @@ Rectangle hallwallRect15 = new Rectangle(285, 240, 35, 10);
 Rectangle hallwallRect16 = new Rectangle(205, 240, 50, 20);
 Rectangle hallwallRect17 = new Rectangle(165, 240, 50, 10);
 Rectangle hallwallRect18 = new Rectangle(135, 240, 30, 20);
+Rectangle hallwallRect19 = new Rectangle(75, 250, 70, 20);
+Rectangle hallwallRect20 = new Rectangle(75, 250, 10, 100);
 
-//Rectangle hallwallRect19 = new Rectangle(135, 240, 30, 20);
-//Rectangle hallwallRect20 = new Rectangle(135, 240, 30, 20);
-//Rectangle hallwallRect21 = new Rectangle(135, 240, 30, 20);
-//Rectangle hallwallRect22 = new Rectangle(135, 240, 30, 20);
-//Rectangle hallwallRect23 = new Rectangle(135, 240, 30, 20);
-//Rectangle hallwallRect24 = new Rectangle(135, 240, 30, 20);
 
 
 
 
 //Avmarkering för kollision (Vägg, Vardagsrummet)
+Rectangle mainwallRect1 = new Rectangle(430, 430, 10, 50);
+Rectangle mainwallRect2 = new Rectangle(390, 430, 10, 50);
+Rectangle mainwallRect3 = new Rectangle(345, 470, 45, 10);
+Rectangle mainwallRect4 = new Rectangle(235, 470, 30, 0);
+
+Rectangle mainwallRect5 = new Rectangle(135, 240, 30, 20);
+Rectangle mainwallRect6 = new Rectangle(135, 240, 30, 20);
+Rectangle mainwallRect7 = new Rectangle(135, 240, 30, 20);
 
 
-
+//Avmarkering för Zombiens förflyttning (Patrullering)
+//Rectangle patrolRect1 = new Rectangle(400, 450, 30, 5);
+//Rectangle patrolRect2 = new Rectangle(430, 510, 5, 30);
+//Rectangle patrolRect3 = new Rectangle(400, 540, 30, 5);
+//Rectangle patrolRect4 = new Rectangle(270, 510, 5, 30);
 
 
 //Avmarkering för trigger (Förflyttning mellan rum)
 Rectangle triggerRect1 = new Rectangle(255, 155, 30, 5);   //Sovrummet -> Hallen
 Rectangle triggerRect2 = new Rectangle(255, 240, 30, 5);   //Hallen -> Sovrummet
-Rectangle triggerRect3 = new Rectangle(540, 250, 5, 45);   //Hallen -> Förrådet
-Rectangle triggerRect4 = new Rectangle(400, 430, 30, 5);   //Förrådet -> Hallen
+Rectangle triggerRect3 = new Rectangle(540, 250, 5, 45);   //Hallen -> Vardagsrummet
+Rectangle triggerRect4 = new Rectangle(400, 430, 30, 5);   //Vardagsrummet -> Hallen
 
 while (!Raylib.WindowShouldClose())
 {
+    //Variabler för rörelse (Spelare)
     if (Raylib.IsKeyDown(KeyboardKey.KEY_W))
     {
         playerRect.y -= 1;
@@ -96,30 +110,52 @@ while (!Raylib.WindowShouldClose())
     }
 
 
+
+    //Variabler för förflyttning.
     if (Raylib.CheckCollisionRecs(triggerRect1, playerRect))
     {
         playerRect.x = 255;
         playerRect.y = 250;
     }
-
     if (Raylib.CheckCollisionRecs(triggerRect2, playerRect))
     {
         playerRect.x = 255;
         playerRect.y = 120;
     }
-
-
     if (Raylib.CheckCollisionRecs(triggerRect3, playerRect))
     {
         playerRect.x = 395;
         playerRect.y = 450;
     }
-
     if (Raylib.CheckCollisionRecs(triggerRect4, playerRect))
     {
         playerRect.x = 505;
         playerRect.y = 260;
     }
+
+
+    // if (Raylib.CheckCollisionRecs(patrolRect1, zombieRect))
+    //{
+    //zombiemoveY++;
+    //zombieRect.y += zombiemoveY;
+    //}
+    //if (Raylib.CheckCollisionRecs(patrolRect2, zombieRect))
+    //{
+    //zombiemoveX--;
+    //zombieRect.x -= zombiemoveX;
+    //}
+    //if (Raylib.CheckCollisionRecs(patrolRect4, zombieRect))
+    //{
+    //zombiemoveX++;
+    //zombieRect.x += zombiemoveX;
+    //}
+    //if (Raylib.CheckCollisionRecs(patrolRect3, zombieRect))
+    //{
+    //zombiemoveY--;
+    //zombieRect.y -= zombiemoveY;
+    //}
+
+
 
 
     Raylib.BeginDrawing();
@@ -135,6 +171,10 @@ while (!Raylib.WindowShouldClose())
     //Spelare
     Raylib.DrawRectangleRec(playerRect, Color.BLANK);
     Raylib.DrawTexture(playerImage, (int)playerRect.x, (int)playerRect.y, Color.WHITE);
+
+    //Zombie
+    Raylib.DrawRectangleRec(zombieRect, Color.BLANK);
+    Raylib.DrawTexture(zombieImage, (int)zombieRect.x, (int)zombieRect.y, Color.WHITE);
 
 
     //Kollision Sovrumsväggar
@@ -165,13 +205,26 @@ while (!Raylib.WindowShouldClose())
     Raylib.DrawRectangleRec(hallwallRect16, Color.LIME);
     Raylib.DrawRectangleRec(hallwallRect17, Color.LIME);
     Raylib.DrawRectangleRec(hallwallRect18, Color.LIME);
+    Raylib.DrawRectangleRec(hallwallRect19, Color.LIME);
+    Raylib.DrawRectangleRec(hallwallRect20, Color.LIME);
 
-    //Raylib.DrawRectangleRec(hallwallRect19, Color.LIME);
-    //Raylib.DrawRectangleRec(hallwallRect20, Color.LIME);
-    //Raylib.DrawRectangleRec(hallwallRect21, Color.LIME);
-    //Raylib.DrawRectangleRec(hallwallRect22, Color.LIME);
-    //Raylib.DrawRectangleRec(hallwallRect23, Color.LIME);
-    //Raylib.DrawRectangleRec(hallwallRect24, Color.LIME);
+
+    //Kollision Vardagsrumsväggar
+    Raylib.DrawRectangleRec(mainwallRect1, Color.LIME);
+    Raylib.DrawRectangleRec(mainwallRect2, Color.LIME);
+    Raylib.DrawRectangleRec(mainwallRect3, Color.LIME);
+    Raylib.DrawRectangleRec(mainwallRect4, Color.LIME);
+    Raylib.DrawRectangleRec(mainwallRect5, Color.LIME);
+    Raylib.DrawRectangleRec(mainwallRect6, Color.LIME);
+    Raylib.DrawRectangleRec(mainwallRect7, Color.LIME);
+
+
+    //Kollision Patrullblock
+    //Raylib.DrawRectangleRec(patrolRect1, Color.RED);
+    //Raylib.DrawRectangleRec(patrolRect2, Color.RED);
+    //Raylib.DrawRectangleRec(patrolRect3, Color.RED);
+    //Raylib.DrawRectangleRec(patrolRect4, Color.RED);
+
 
     //Kollision Dörr (Sovrummet -> Hallen)
     Raylib.DrawRectangleRec(triggerRect1, Color.BLUE);
@@ -185,6 +238,14 @@ while (!Raylib.WindowShouldClose())
     //Kollision Dörr (Vardagsrummet -> Hallen)
     Raylib.DrawRectangleRec(triggerRect4, Color.BLUE);
 
+
+    //Variabel Zombie (Game Over)
+    if (Raylib.CheckCollisionRecs(zombieRect, playerRect))
+    {
+        zombieRect.x = playerRect.x;
+        zombieRect.y = playerRect.y;
+        Raylib.DrawRectangle(0, 0, 800, 600, Color.DARKGRAY);
+    }
 
     Raylib.EndDrawing();
 }
