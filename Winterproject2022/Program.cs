@@ -122,6 +122,13 @@ while (!Raylib.WindowShouldClose())
         playerRect.y += movement.Y;
     }
 
+    if (level == "start")
+    {
+        if (Raylib.CheckCollisionRecs(playerRect, finishRect1))
+        {
+            level = "end";
+        }
+    }
 
 
     //Variabler för förflyttning (Dörr).
@@ -275,11 +282,6 @@ while (!Raylib.WindowShouldClose())
             Raylib.DrawRectangle(0, 0, 800, 600, Color.DARKGRAY);
 
             Raylib.DrawText("You Died!", 140, 260, 110, Color.RED);
-        }
-
-        if (Raylib.CheckCollisionRecs(playerRect, finishRect1))
-        {
-            level = "end";
         }
 
     }
