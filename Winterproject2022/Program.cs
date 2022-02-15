@@ -20,7 +20,7 @@ Rectangle playerRect = new Rectangle(220, 90, playerImage.width, playerImage.hei
 Texture2D zombieImage = Raylib.LoadTexture("TopDownZombie.png");
 
 Rectangle zombieRect = new Rectangle(450, 260, zombieImage.width, zombieImage.height);
-Rectangle zombieRect2 = new Rectangle(150, 310, zombieImage.width, zombieImage.height);
+Rectangle zombieRect2 = new Rectangle(150, 312, zombieImage.width, zombieImage.height);
 Rectangle zombieRect3 = new Rectangle(400, 540, zombieImage.width, zombieImage.height);
 Rectangle zombieRect4 = new Rectangle(540, 110, zombieImage.width, zombieImage.height);
 
