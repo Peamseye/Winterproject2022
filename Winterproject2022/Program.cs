@@ -1,6 +1,4 @@
-﻿//KOM IHÅG: Kolla Clipping vid väggarna.
-
-using System;
+﻿using System;
 using System.Numerics;
 using Raylib_cs;
 
